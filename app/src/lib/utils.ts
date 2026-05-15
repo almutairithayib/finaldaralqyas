@@ -8,7 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 export function getAssetPath(path: string) {
   const base = import.meta.env.BASE_URL || "/";
   if (path.startsWith("/")) {
-    return `${base}${path.slice(1)}`;
+    const cleanBase = base.endsWith("/") ? base : `${base}/`;
+    return `${cleanBase}${path.slice(1)}`;
   }
   return path;
 }
