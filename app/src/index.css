@@ -1,0 +1,59 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 207 96% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 207 96% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 96% 18%;
+    --primary: 207 96% 18%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 50 5% 95%;
+    --secondary-foreground: 207 96% 18%;
+    --muted: 50 5% 95%;
+    --muted-foreground: 207 96% 18%;
+    --accent: 38 45% 58%;
+    --accent-foreground: 207 96% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 207 96% 18%;
+    --input: 220 13% 91%;
+    --ring: 38 45% 58%;
+    --radius: 0rem;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 50s linear infinite;
+}
