@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -56,7 +57,7 @@ export default function Projects() {
             <div key={index} className="project-card group">
               <div className="aspect-video overflow-hidden rounded-xl">
                 <img
-                  src={p.image}
+                  src={getAssetPath(p.image)}
                   alt={p.title}
                   className="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-600"
                   loading="lazy"

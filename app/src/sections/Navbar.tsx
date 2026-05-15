@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Menu, X, Globe } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 export default function Navbar() {
   const { t, language, toggleLanguage } = useLanguage()
@@ -59,7 +60,7 @@ export default function Navbar() {
         <div className="w-full max-w-[1200px] mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <button onClick={() => handleNav('#hero')} className="flex items-center gap-3 group">
-            <img src="/logo.png" alt="Logo" className="h-10 w-auto object-contain" />
+            <img src={getAssetPath('/logo.png')} alt="Logo" className="h-10 w-auto object-contain" />
           </button>
 
           {/* Desktop Nav */}

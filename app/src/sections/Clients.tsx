@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 // gov1 = blank/transparent → removed
 // gov2 = fake target icon → removed
@@ -57,7 +58,7 @@ export default function Clients() {
               className="bg-white border border-navy/5 rounded-xl p-4 flex items-center justify-center h-[120px] transition-all duration-300 hover:shadow-lg hover:border-warm-gold/30 group"
             >
               <img
-                src={logo.src}
+                src={getAssetPath(logo.src)}
                 alt="Client Logo"
                 className={`object-contain transition-transform duration-300 group-hover:scale-110 ${
                   logo.boost

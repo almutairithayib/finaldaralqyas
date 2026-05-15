@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 export default function Hero() {
   const { t, language } = useLanguage()
@@ -159,7 +160,7 @@ export default function Hero() {
           ref={labelRef}
           className="mb-8 opacity-0"
         >
-          <img src="/logo.png" alt="Logo" className="h-20 w-auto object-contain" />
+          <img src={getAssetPath('/logo.png')} alt="Logo" className="h-20 w-auto object-contain" />
         </div>
 
         {/* Main headline */}

@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -81,7 +82,7 @@ export default function About() {
           <div ref={rightColRef} className="lg:col-span-2 flex flex-col">
             <div className="relative overflow-hidden aspect-[3/4] rounded-2xl shadow-2xl">
               <img
-                src="/about.jpg"
+                src={getAssetPath('/about.jpg')}
                 alt="Architecture"
                 className="w-full h-full object-cover"
                 loading="lazy"

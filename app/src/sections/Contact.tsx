@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { MapPin, Mail } from 'lucide-react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { getAssetPath } from '../lib/utils'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -173,7 +174,7 @@ export default function Contact() {
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
     }
-    img.src = '/water-normal.jpg'
+    img.src = getAssetPath('/water-normal.jpg')
 
     const mouse = { x: 0, y: 0, active: 0 }
     const onMouseMove = (e: MouseEvent) => {
